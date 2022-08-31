@@ -1,11 +1,14 @@
 package pratice1.Week_02;
 
 /**
- * ��ָ Offer 49. ����
+ * https://leetcode.cn/problems/ugly-number-ii/
+ * 264. 丑数 II
  * @author Joe
  *
  */
 public class NthUglyNumber {
+
+	// 动态规划
 	public int nthUglyNumber(int n) {
 		int[] uglyNum = new int[n];
 		uglyNum[0] = 1;
