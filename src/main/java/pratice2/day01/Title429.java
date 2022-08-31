@@ -1,4 +1,4 @@
-package pratice1.Week_02;
+package pratice2.day01;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,29 +10,31 @@ import java.util.List;
  * @author Joe
  *
  */
-public class LevelOrder {
+public class Title429 {
 
 	public List<List<Integer>> levelOrder(Node root) {
 		List<List<Integer>> result = new ArrayList<>();
-		if(root == null) {
+		if (root == null) {
 			return result;
 		}
-		level(result, Arrays.asList(root));
+		_levelOrder(Arrays.asList(root), result);
 		return result;
 	}
 
-	private void level(List<List<Integer>> result, List<Node> levelNodes) {
-		if(levelNodes.isEmpty()) {
+	private void _levelOrder(List<Node> nodes, List<List<Integer>> result) {
+		if (nodes.isEmpty()) {
 			return;
 		}
-		List<Integer> list = new ArrayList<>();
-		List<Node> childNodes = new ArrayList<>();
-		for (Node node : levelNodes) {
-			list.add(node.val);
-			childNodes.addAll(node.children);
+		List<Integer> vals = new ArrayList<>(nodes.size());
+		List<Node> allChildren = new ArrayList<>();
+		for (Node node : nodes) {
+			vals.add(node.val);
+			if (node.children != null) {
+				allChildren.addAll(node.children);
+			}
 		}
-		result.add(list);
-		level(result, childNodes);
+		result.add(vals);
+		_levelOrder(allChildren, result);
 	}
 
 	//Definition for a Node.
@@ -51,5 +53,5 @@ public class LevelOrder {
 			val = _val;
 			children = _children;
 		}
-	};
+	}
 }

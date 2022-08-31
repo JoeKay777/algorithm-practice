@@ -1,4 +1,4 @@
-package pratice2;
+package pratice2.day01;
 
 /**
  * 26. 删除有序数组中的重复项

@@ -1,4 +1,4 @@
-package pratice1.Week_02;
+package pratice2.day01;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  * @author Joe
  *
  */
-public class InorderTraversal {
+public class Title94 {
 
 	public List<Integer> inorderTraversal(TreeNode root) {
 		List<Integer> result = new ArrayList<>();
