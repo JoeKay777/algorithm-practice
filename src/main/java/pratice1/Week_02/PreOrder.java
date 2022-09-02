@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 589. N������ǰ�����
+ * https://leetcode.cn/problems/n-ary-tree-preorder-traversal/
+ * 589. N 叉树的前序遍历
  * @author Joe
  *
  */
