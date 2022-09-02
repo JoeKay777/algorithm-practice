@@ -5,12 +5,13 @@ import java.util.Map;
 
 
 /**
+ * https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  * 105. 从前序与中序遍历序列构造二叉树
  */
 public class BuildTree {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         Map<Integer, Integer> inMap = new HashMap<>();
-        for(int i = 0; i < inorder.length; i++) {
+        for (int i = 0; i < inorder.length; i++) {
             inMap.put(inorder[i], i);
         }
         return build(preorder, 0, preorder.length, inMap, 0, inorder.length);
