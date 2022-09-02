@@ -1,4 +1,4 @@
-package pratice1.Week_02;
+package pratice2.day01;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author Joe
  */
-class PreorderTraversal {
+class Title144 {
     //Definition for a binary tree node.
     public class TreeNode {
         int val;
@@ -32,17 +32,19 @@ class PreorderTraversal {
 
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        preorder(result, root);
+        _preorderTraversal(result, root);
         return result;
     }
 
-    private void preorder(List<Integer> result, TreeNode root) {
+    private void _preorderTraversal(List<Integer> result, TreeNode root) {
         if (root == null) {
             return;
         }
         result.add(root.val);
-        preorder(result, root.left);
-        preorder(result, root.right);
+        _preorderTraversal(result, root.left);
+        _preorderTraversal(result, root.right);
     }
+
+
 }
 

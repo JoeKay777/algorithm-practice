@@ -6,7 +6,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * 347. ǰ K ����ƵԪ��
+ * https://leetcode.cn/problems/top-k-frequent-elements/
+ * 347. 前 K 个高频元素
  * 
  * @author Joe
  *
@@ -14,7 +15,6 @@ import java.util.Queue;
 public class TopFrequent {
 
 	public int[] topKFrequent(int[] nums, int k) {
-		// ͳ��Ԫ��Ƶ��
 		Map<Integer, Integer> freMap = new HashMap<>();
 		for (int i : nums) {
 			Integer count = freMap.getOrDefault(i, 0);
